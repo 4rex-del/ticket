@@ -2,11 +2,8 @@ import discord
 import os
 from discord.ext import commands
 from discord import utils
-import datetime, pytz
 
 from myserver import server_on
-
-tz = pytz.timezone('Asia/Bangkok')
 
 channelid = "1412433107574849577"  # ไอดี log
 channelCategory = "1411575398780764251"  # ไอดีหมวดหมู่
@@ -210,5 +207,6 @@ async def setup(ctx: commands.Context):
     await ctx.send(embed=embed, view=Create_ticket())
 
 server_on()
+
 
 bot.run(os.getenv('TOKEN'))
